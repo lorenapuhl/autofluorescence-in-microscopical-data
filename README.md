@@ -153,14 +153,23 @@ The analysis pipeline consistently reveals several key patterns across experimen
 
   <img src="https://github.com/user-attachments/assets/0fb61e44-5ce1-482c-9d53-ea24f6e5791e" alt="Image 4" width="700"/>
   <br>
-  <em> Figure 8: Spatial intensity distributions over the y-axis for worms of increasing ages. One can qualitiatively infer, that while young worms mainly showcase high intensities in the neuron's region, older worms feature higher overall intensities (autofluorescence) </em>
+  <em> Figure 8: Spatial intensity distributions over the y-axis for worms of increasing ages using fluorescence microscopy. One can qualitiatively infer, that while young worms mainly showcase high intensities in the neuron's region, older worms feature higher overall intensities (autofluorescence) </em>
+</p>
+
+
+
+  <p align="center">
+
+  <img src= "https://github.com/user-attachments/assets/85dae11f-46e1-498b-867e-7ee86b421205" alt="Image 4" width="700"/>
+  <br>
+  <em> Figure 9: Spatial intensity distributions over the y-axis for worms of increasing ages using bioluminescence microsocopy. While fluorescence microscopy features increasing autofluorescence, intensity distributions using bioluminescence microscopy stay concentrated around the labelled neuron. </em>
 </p>
 
 
 
 ### 11. Neuron-to-Autofluorescence Ratio
 
-While the provided code focuses on quantifying total autofluorescence, the thesis also examines how this autofluorescence affects the visibility of intentionally labeled neuronal signals. The neuron-to-autofluorescence ratio analysis involves:
+We further examine how autofluorescence affects the visibility of intentionally labeled neuronal signals. The neuron-to-autofluorescence ratio analysis involves:
 
 1. Separately quantifying the fluorescence intensity from labeled touch receptor neurons
 2. Calculating the ratio between neuronal signal and total autofluorescence
@@ -168,13 +177,13 @@ While the provided code focuses on quantifying total autofluorescence, the thesi
 
 This ratio directly measures signal visibility: a high ratio means the neuronal signal stands out clearly against background autofluorescence, while a low ratio indicates the signal is increasingly masked by autofluorescence.
 
-![Ratio extrachromosomal](images/ratio_extrachromosomal.png)
 
-*Figure: Autofluorescence-to-noise ratios for the extrachromosomal strain MSB557 at different ages.*
+  <p align="center">
 
-![Ratio integrated](images/ratio_integrated.png)
-
-*Figure: Autofluorescence-to-noise ratios for the integrated strain MSB651 at different ages.*
+  <img src= "https://github.com/user-attachments/assets/96ae548f-df51-4639-ad8a-7d159dd44d93" alt="Image 4" width="700"/>
+  <br>
+  <em> Figure 10: Autofluorescence-to-noise ratios for the extrachromosomal strain MSB557 at different ages. Individual data-points, as well as medians and median standard deviations are depicted. (right) Autofluorescence-to-noise ratios in tails. (left) Autofluorescence-to-noise ratios in bodies.</em>
+</p>
 
 The results show a steady decrease in signal-to-autofluorescence ratio over time. This demonstrates that autofluorescence accumulates more rapidly than any changes in neuronal signal intensity, progressively masking the labeled neurons. This progressive signal loss is the core problem that motivates the search for alternative imaging approaches like bioluminescence microscopy.
 
