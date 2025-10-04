@@ -73,9 +73,9 @@ The analysis pipeline (`14_FINAL_x_y_time.py`) uses modular functions to process
 
   <p align="center">
 
-  <img src="https://github.com/user-attachments/assets/60245e4c-61e0-485c-879d-fa47b548d3bf" alt="Image 4" width="700"/>
+  <img src="https://github.com/user-attachments/assets/60245e4c-61e0-485c-879d-fa47b548d3bf" alt="Image 4" width="500"/>
   <br>
-  <em>Figure 4: Averaged spatial intensity over the y-axis. A Gaussian is tted to the data. Its baseline represents the computed background value. The worms y-coordinates are determined by the range $[x_0 - 3/sigma; x_0 + 3\sigma]$, where $x_0$ designates the Gaussian's median and $\sigma$ the standard deviation.</em>
+  <em> Figure 4: Averaged spatial intensity over the y-axis. A Gaussian is fitted to the data. Its baseline represents the computed background value. The worm's y-coordinates are determined by the range [x₀ - 3σ, x₀ + 3σ], where x₀ designates the Gaussian's median and σ the standard deviation. </em>
 </p>
 
 
