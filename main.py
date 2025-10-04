@@ -7,231 +7,345 @@ from statsmodels import robust
 
 """insert parameters"""
 #insert data
-names_01Feb = ["01Feb_W01_tail_Gre","01Feb_W02_tail_Gre","01Feb_W03_tail_Gre","01Feb_W04_tail_Gre","01Feb_W05_tail_Gre","01Feb_W06_tail_Gre","01Feb_W07_tail_Gre","01Feb_W08_tail_Gre","01Feb_W09_tail_Gre","01Feb_W10_tail_Gre","01Feb_W11_tail_Gre","01Feb_W12_tail_Gre","01Feb_W13_tail_Gre"] #INSERT names of images to be processed
-names_02Feb = ["02Feb_W01_tail_Gre","02Feb_W02_tail_Gre","02Feb_W03_tail_Gre","02Feb_W04_tail_Gre","02Feb_W05_tail_Gre","02Feb_W06_tail_Gre","02Feb_W07_tail_Gre","02Feb_W08_tail_Gre","02Feb_W09_tail_Gre","02Feb_W10_tail_Gre","02Feb_W11_tail_Gre","02Feb_W12_tail_Gre","02Feb_W13_tail_Gre"] #INSERT names of images to be processed
-names_04Feb = ["04Feb_W01_tail_Gre","04Feb_W02_tail_Gre","04Feb_W03_tail_Gre","04Feb_W04_tail_Gre","04Feb_W05_tail_Gre","04Feb_W06_tail_Gre","04Feb_W07_tail_Gre","04Feb_W08_tail_Gre","04Feb_W09_tail_Gre","04Feb_W10_tail_Gre","04Feb_W11_tail_Gre","04Feb_W12_tail_Gre","04Feb_W13_tail_Gre"] #INSERT names of images to be processed
-names_05Feb = ["05Feb_W01_tail_Gre","05Feb_W02_tail_Gre","05Feb_W03_tail_Gre","05Feb_W04_tail_Gre","05Feb_W05_tail_Gre","05Feb_W06_tail_Gre","05Feb_W07_tail_Gre","05Feb_W08_tail_Gre","05Feb_W09_tail_Gre","05Feb_W10_tail_Gre","05Feb_W11_tail_Gre","05Feb_W12_tail_Gre","05Feb_W13_tail_Gre"] #INSERT names of images to be processed
-names_08Feb = ["08Feb_W01_tail_Gre","08Feb_W02_tail_Gre","08Feb_W03_tail_Gre","08Feb_W04_tail_Gre","08Feb_W05_tail_Gre","08Feb_W06_tail_Gre","08Feb_W07_tail_Gre","08Feb_W08_tail_Gre","08Feb_W09_tail_Gre","08Feb_W10_tail_Gre"] #INSERT names of images to be processed
-names_12Feb = ["12Feb_W01_tail_Gre","12Feb_W02_tail_Gre","12Feb_W03_tail_Gre","12Feb_W05_tail_Gre","12Feb_W06_tail_Gre","12Feb_W07_tail_Gre","12Feb_W08_tail_Gre","12Feb_W09_tail_Gre","12Feb_W10_tail_Gre","12Feb_W11_tail_Gre","12Feb_W12_tail_Gre"] #INSERT names of images to be processed
+names_01Feb = ["01Feb_W01_tail_Gre","01Feb_W02_tail_Gre","01Feb_W03_tail_Gre","01Feb_W04_tail_Gre","01Feb_W05_tail_Gre","01Feb_W06_tail_Gre","01Feb_W07_tail_Gre","01Feb_W08_tail_Gre","01Feb_W09_tail_Gre","01Feb_W10_tail_Gre","01Feb_W11_tail_Gre","01Feb_W12_tail_Gre","01Feb_W13_tail_Gre"]
+names_02Feb = ["02Feb_W01_tail_Gre","02Feb_W02_tail_Gre","02Feb_W03_tail_Gre","02Feb_W04_tail_Gre","02Feb_W05_tail_Gre","02Feb_W06_tail_Gre","02Feb_W07_tail_Gre","02Feb_W08_tail_Gre","02Feb_W09_tail_Gre","02Feb_W10_tail_Gre","02Feb_W11_tail_Gre","02Feb_W12_tail_Gre","02Feb_W13_tail_Gre"]
+names_04Feb = ["04Feb_W01_tail_Gre","04Feb_W02_tail_Gre","04Feb_W03_tail_Gre","04Feb_W04_tail_Gre","04Feb_W05_tail_Gre","04Feb_W06_tail_Gre","04Feb_W07_tail_Gre","04Feb_W08_tail_Gre","04Feb_W09_tail_Gre","04Feb_W10_tail_Gre","04Feb_W11_tail_Gre","04Feb_W12_tail_Gre","04Feb_W13_tail_Gre"]
+names_05Feb = ["05Feb_W01_tail_Gre","05Feb_W02_tail_Gre","05Feb_W03_tail_Gre","05Feb_W04_tail_Gre","05Feb_W05_tail_Gre","05Feb_W06_tail_Gre","05Feb_W07_tail_Gre","05Feb_W08_tail_Gre","05Feb_W09_tail_Gre","05Feb_W10_tail_Gre","05Feb_W11_tail_Gre","05Feb_W12_tail_Gre","05Feb_W13_tail_Gre"]
+names_08Feb = ["08Feb_W01_tail_Gre","08Feb_W02_tail_Gre","08Feb_W03_tail_Gre","08Feb_W04_tail_Gre","08Feb_W05_tail_Gre","08Feb_W06_tail_Gre","08Feb_W07_tail_Gre","08Feb_W08_tail_Gre","08Feb_W09_tail_Gre","08Feb_W10_tail_Gre"]
+names_12Feb = ["12Feb_W01_tail_Gre","12Feb_W02_tail_Gre","12Feb_W03_tail_Gre","12Feb_W05_tail_Gre","12Feb_W06_tail_Gre","12Feb_W07_tail_Gre","12Feb_W08_tail_Gre","12Feb_W09_tail_Gre","12Feb_W10_tail_Gre","12Feb_W11_tail_Gre","12Feb_W12_tail_Gre"]
 
-
-#NO OUTLIERS
-
-name_sets = [names_01Feb,names_02Feb,names_04Feb,names_05Feb, names_08Feb, names_12Feb] #INSERT aquisition sets
+name_sets = [names_01Feb,names_02Feb,names_04Feb,names_05Feb, names_08Feb, names_12Feb]
 
 #enter time of image acquisition
-time_01Feb = list(np.ones(len(names_01Feb))*72) #INSERT time data
-time_02Feb = list(np.ones(len(names_02Feb))*93) #INSERT time data
-time_04Feb = list(np.ones(len(names_04Feb))*48) #INSERT time data
-time_05Feb = list(np.ones(len(names_05Feb))*167.5) #INSERT time data
-time_08Feb = list(np.ones(len(names_08Feb))*238) #INSERT time data
-time_12Feb = list(np.ones(len(names_12Feb))*338) #INSERT time data
+time_01Feb = list(np.ones(len(names_01Feb))*72)
+time_02Feb = list(np.ones(len(names_02Feb))*93)
+time_04Feb = list(np.ones(len(names_04Feb))*48)
+time_05Feb = list(np.ones(len(names_05Feb))*167.5)
+time_08Feb = list(np.ones(len(names_08Feb))*238)
+time_12Feb = list(np.ones(len(names_12Feb))*338)
 
+time_sets = [time_01Feb,time_02Feb,time_04Feb,time_05Feb, time_08Feb, time_12Feb]
 
-
-time_sets = [time_01Feb,time_02Feb,time_04Feb,time_05Feb, time_08Feb, time_12Feb] #INSERT acquisition times-sets
-
-"""Prepare  time and names list for processing"""
-
+"""Prepare time and names list for processing"""
 ##add times to single list
-time_01Feb = [str(t) for t in time_01Feb] #INSERT acquisition set
-time_02Feb = [str(t) for t in time_02Feb] #INSERT acquisition set
-time_04Feb = [str(t) for t in time_04Feb] #INSERT acquisition set
-time_05Feb = [str(t) for t in time_05Feb] #INSERT acquisition set
-time_08Feb = [str(t) for t in time_08Feb] #INSERT acquisition set
-time_12Feb = [str(t) for t in time_12Feb] #INSERT acquisition set
+time_01Feb = [str(t) for t in time_01Feb]
+time_02Feb = [str(t) for t in time_02Feb]
+time_04Feb = [str(t) for t in time_04Feb]
+time_05Feb = [str(t) for t in time_05Feb]
+time_08Feb = [str(t) for t in time_08Feb]
+time_12Feb = [str(t) for t in time_12Feb]
 
-
-
-time = time_01Feb + time_02Feb + time_04Feb + time_05Feb + time_08Feb + time_12Feb #INSERT acuisition set time+time+...
+time = time_01Feb + time_02Feb + time_04Feb + time_05Feb + time_08Feb + time_12Feb
 
 #convert elements back into floats
 time = [np.float(t) for t in time]
 
-"""y spatial intensity distribution"""
+"""Configuration flags"""
 #Plot intensity profiles?
-plot_y_inten=False
+plot_y_inten = False
 fig_y_inten_distr = 1
-#Plot intensity profiles in same graph?
-same_graph_y = False #If false, graphs are plotted individually
+same_graph_y = False
 
-"""Gaussian fit for background and worm position"""
-#Plot Gaussian on y spatial intensity distribution?
-plotgauss= False
+plotgauss = False
 
-"""x spatial intensity distribution"""
-#Plot intensity profiles?
-plot_x_inten=False
+plot_x_inten = False
 fig_x_inten_distr = 2
-#Plot intensity profiles in same graph?
-same_graph_x = False #If false, graphs are plotted individually
+same_graph_x = False
 
-
-"""total intensity over time"""
-#Plot each data point?
 plot_points = True
 fig_tot_inten_points = 3
-#Plot statistics?
-plot_stats= True
+plot_stats = True
 fig_tot_inten_stats = 4
-#Plot both in same graph?
 plot_both = True
 fig_tot_inten = 5
 
 
-"""Processing function"""
-def process(imname,index_acquisitionset):
-    """open image"""
-    im = Image.open(imname+".tif")
-    #im.show()
-    impixels=np.array(im)
+"""FUNCTION DEFINITIONS"""
+
+def load_image(imname):
+    """
+    Load TIFF image and convert to numpy array
     
-    """basic facts"""
-    #get shape of picture
-    #eg [[1,2,3],[4,5,6]] is (2,3)
-    xsize= int(impixels.shape[1])
-    ysize= int(impixels.shape[0])
-    print("xsize", xsize, "ysize",ysize)
-
-    #get pixel-type
+    Parameters:
+    -----------
+    imname : str
+        Image filename without extension
+    
+    Returns:
+    --------
+    impixels : numpy array
+        Image as numpy array
+    xsize : int
+        Width of image
+    ysize : int
+        Height of image
+    """
+    im = Image.open(imname+".tif")
+    impixels = np.array(im)
+    
+    xsize = int(impixels.shape[1])
+    ysize = int(impixels.shape[0])
+    
+    print("xsize", xsize, "ysize", ysize)
     print("type", impixels.dtype)
-    #eg float32 floating point number ranging from -3.39x1038 to +3.39x1038
-
-    #maximum pixel-value
     print("maximum", np.max(impixels))
-
-    #minimum pixel-value
     print("minimum", np.min(impixels))
+    
+    return impixels, xsize, ysize
 
-    """get columns"""
-    columns= []
-    #set the amount of lines by defining stepsize in range(0,xsize, xsize/XXX)
-    for i in range(0,xsize):
+
+def extract_columns(impixels, xsize):
+    """
+    Extract vertical columns from image
+    
+    Parameters:
+    -----------
+    impixels : numpy array
+        Image as numpy array
+    xsize : int
+        Width of image
+    
+    Returns:
+    --------
+    columns : numpy array
+        Array of columns
+    amount_columns : int
+        Number of columns
+    length_columns : int
+        Length of each column
+    """
+    columns = []
+    for i in range(0, xsize):
         columns.append(impixels[:,i])
-            
-    columns=np.array(columns)
-
-    #columns.shape yields (x,y) means I have x columns of a length of y
-    amount_columns = int(columns.shape[0]) #lines earlier
-    length_columns = int(columns.shape[1]) #length earlier
+    
+    columns = np.array(columns)
+    amount_columns = int(columns.shape[0])
+    length_columns = int(columns.shape[1])
+    
     print("amount of columns", amount_columns)
     print("length of columns", length_columns)
-    #[[1 2 3 4] [1 2 3 4]] is columns with 2 lines of length 4
+    
+    return columns, amount_columns, length_columns
 
 
-    """calculating background"""
-    ##ignore columns with black spots due to straightening
-
-    #create new columns-list
+def remove_zero_columns(columns, amount_columns, length_columns):
+    """
+    Remove columns containing zero values (artifacts from straightening)
+    
+    Parameters:
+    -----------
+    columns : numpy array
+        Array of columns
+    amount_columns : int
+        Number of columns
+    length_columns : int
+        Length of each column
+    
+    Returns:
+    --------
+    cropped_columns : numpy array
+        Columns without zeros
+    cropped_amount_columns : int
+        Number of valid columns
+    """
     x = []
-
-    #check if line contains 0 value, and delete line if so
-    for i in range(0,amount_columns):
-        for j in range(0,length_columns):
+    for i in range(0, amount_columns):
+        for j in range(0, length_columns):
             if columns[i,j] == 0:
                 break
-            elif j == length_columns -1:
+            elif j == length_columns - 1:
                 x.append(columns[i])
             else:
                 continue
+    
     cropped_columns = np.array(x)
-
-    #dimensions of cropped picture:
     cropped_amount_columns = int(cropped_columns.shape[0])
-    length_columns = int(cropped_columns.shape[1])
-    #print("cropped amount of columns", amount_columns)
-    #[[1 2 3 4] [1 2 3 4]] is columns with 2 lines of length 4
-              
+    
+    return cropped_columns, cropped_amount_columns
 
-    ##Average over all columns
 
-    #summing pixels of every column
-    sum = [] # gives single column with sum of all lines
-    for j in range(0,length_columns):
-        x = cropped_columns[0,j]
-        for i in range(1,cropped_amount_columns-1):
-            x = x + cropped_columns[i,j]
-        sum.append(x)
+def average_columns(columns, amount_columns, length_columns):
+    """
+    Average all columns to get mean intensity profile
+    
+    Parameters:
+    -----------
+    columns : numpy array
+        Array of columns
+    amount_columns : int
+        Number of columns
+    length_columns : int
+        Length of each column
+    
+    Returns:
+    --------
+    avercolumn : numpy array
+        Averaged column profile
+    """
+    sum_array = []
+    for j in range(0, length_columns):
+        x = columns[0,j]
+        for i in range(1, amount_columns-1):
+            x = x + columns[i,j]
+        sum_array.append(x)
+    
+    sum_array = np.array(sum_array)
+    avercolumn = sum_array / amount_columns
+    
+    return avercolumn
 
-    sum = np.array(sum)
 
-    #dividing by amount of lines
-    cropped_avercolumn = sum/cropped_amount_columns
-    #print("average line", averline)
+def gauss_function(x, a, x0, sigma, c):
+    """
+    Gaussian function for curve fitting
+    
+    Parameters:
+    -----------
+    x : array
+        x values
+    a : float
+        Amplitude
+    x0 : float
+        Center position
+    sigma : float
+        Standard deviation
+    c : float
+        Baseline offset
+    
+    Returns:
+    --------
+    y : array
+        Gaussian values
+    """
+    return a*np.exp(-(x-x0)**2/(2*sigma**2)) + c
 
-    ##Gaussian fit on intensity distribution
-    #intensity data
-    x = np.arange(0,length_columns)
-    y = cropped_avercolumn
 
-    #fitting function and parameters
-    def Gauss(x,a,x0,sigma,c):
-        return a*np.exp(-(x-x0)**2/(2*sigma**2))+c
-
+def fit_gaussian(avercolumn, length_columns, imname):
+    """
+    Fit Gaussian to intensity profile to determine background and worm position
+    
+    Parameters:
+    -----------
+    avercolumn : numpy array
+        Averaged column profile
+    length_columns : int
+        Length of column
+    imname : str
+        Image name for saving plot
+    
+    Returns:
+    --------
+    popt : array
+        Optimized parameters [a, x0, sigma, c]
+    bg : float
+        Background intensity (baseline)
+    """
+    x = np.arange(0, length_columns)
+    y = avercolumn
+    
+    # Initial parameters
     a = np.max(y)
-    x0=length_columns/2
+    x0 = length_columns/2
     sigma = 100
     c = np.min(y)
-
-    popt,pcov = curve_fit(Gauss, x, y, p0=[a, x0, sigma, c])
     
-    #Plotting
+    popt, pcov = curve_fit(gauss_function, x, y, p0=[a, x0, sigma, c])
+    
+    # Optional plotting
     if plotgauss == True:
         plt.figure()
         plt.plot(x, y, 'b-', label='aver y-inten')
-        plt.plot(x,Gauss(x, *popt), 'r-', label='fit')
+        plt.plot(x, gauss_function(x, *popt), 'r-', label='fit')
         plt.legend()
         plt.title('Fit of worm position')
         plt.xlabel('height of image from top to bottom')
         plt.ylabel('Intensity')
         plt.savefig(str(imname)+"_average_intensity_gaussian")
         plt.close()
-    else:
-        pass
-
-    ##determine backrground as Gauss-baseline
+    
     bg = popt[3]
+    return popt, bg
 
-    """Setting black spots to background value"""
-    #check if line contains 0 value
-    for i in range(0,amount_columns):
-        for j in range(0,length_columns):
+
+def replace_zeros_with_background(columns, amount_columns, length_columns, bg):
+    """
+    Replace zero-value pixels with background value
+    
+    Parameters:
+    -----------
+    columns : numpy array
+        Array of columns
+    amount_columns : int
+        Number of columns
+    length_columns : int
+        Length of each column
+    bg : float
+        Background value
+    
+    Returns:
+    --------
+    columns : numpy array
+        Columns with zeros replaced
+    """
+    for i in range(0, amount_columns):
+        for j in range(0, length_columns):
             if columns[i,j] == 0:
                 columns[i,j] = bg
     
-                         
-    """Average over all columns"""
-    #summing pixels of every column
-    sum = [] # gives single column with sum of all lines
-    for j in range(0,length_columns):
-        x = columns[0,j]
-        for i in range(1,amount_columns-1):
-            x = x + columns[i,j]
-        sum.append(x)
-
-    sum = np.array(sum)
-
-    #dividing by amount of columns
-    avercolumn = sum/amount_columns
-    #print("averaged column", avercolumn)
+    return columns
 
 
-    """background subtraction"""
-    avercolumn = (avercolumn - bg)/bg
-
-    #set negative pixels to zero
-    for i in range(0,length_columns):
-        if avercolumn[i]<0:
-            avercolumn[i]=0    
-
-    """Illustration of spatial intensity distribution in y"""
-    if plot_y_inten==True:
+def background_subtraction(avercolumn, bg, length):
+    """
+    Subtract and normalize by background
     
+    Parameters:
+    -----------
+    avercolumn : numpy array
+        Averaged intensity profile
+    bg : float
+        Background value
+    length : int
+        Length of profile
+    
+    Returns:
+    --------
+    avercolumn : numpy array
+        Background-subtracted profile
+    """
+    avercolumn = (avercolumn - bg) / bg
+    
+    # Set negative pixels to zero
+    for i in range(0, length):
+        if avercolumn[i] < 0:
+            avercolumn[i] = 0
+    
+    return avercolumn
+
+
+def plot_y_intensity_distribution(avercolumn, length_columns, imname, index_acquisitionset, bg):
+    """
+    Plot spatial intensity distribution along y-axis
+    
+    Parameters:
+    -----------
+    avercolumn : numpy array
+        Averaged column profile
+    length_columns : int
+        Length of column
+    imname : str
+        Image name
+    index_acquisitionset : int
+        Index of acquisition set
+    bg : float
+        Background value
+    """
+    if plot_y_inten == True:
         if same_graph_y == True:
             plt.figure(fig_y_inten_distr)
-            x = np.arange(0,length_columns)
+            x = np.arange(0, length_columns)
             y = avercolumn
-            plt.plot(x,y,label=imname[6:9]+" bg= "+str(int(bg)))
+            plt.plot(x, y, label=imname[6:9]+" bg= "+str(int(bg)))
             plt.xlabel("ypixel from top to bottom of image")
             plt.ylabel("average intensity")
             plt.title("average intensity over y-axis for "+imname[0:5]+imname[9:22])
@@ -239,79 +353,112 @@ def process(imname,index_acquisitionset):
             plt.savefig("y_intensity_distribution"+imname[0:4]+imname[9:22])
             if imname == name_sets[index_acquisitionset][-1]:
                 plt.close(fig_y_inten_distr)
-            else:
-                pass
-            
         else:
             fig = plt.figure()
-            x = np.arange(0,length_columns)
+            x = np.arange(0, length_columns)
             y = avercolumn
-            plt.plot(x,y,label=imname[6:8])
+            plt.plot(x, y, label=imname[6:8])
             plt.xlabel("ypixel from top to bottom of image")
             plt.ylabel("average intensity")
             plt.title("average intensity over y-axis of "+imname)
             plt.figtext(.7, .8, "bg= "+str(int(bg)))
             plt.savefig(str(imname)+"_y_intensity_distribution")
-            plt.close (fig)
-            
-    else:
-        pass
-        
-  
-    """Illsutration of spatial intensity distribution in x"""
-    ##get lines
-    lines= []
-    #set the amount of lines by defining stepsize in range(0,xsize, xsize/XXX)
-    for i in range(0,ysize):
-        lines.append(impixels[i,:])
-            
-    lines=np.array(lines)
+            plt.close(fig)
 
-    #lines.shape yields (x,y) means I have x lines of a length of y
-    amount_lines = int(lines.shape[0])
-    length_lines = int(lines.shape[1])
-    print("amount of lines", amount_lines)
-    print("length of lines", length_lines)
-    #[[1 2 3 4] [1 2 3 4]] is 2 lines of length 4
+
+def extract_and_crop_lines(impixels, ysize, popt):
+    """
+    Extract horizontal lines and crop to region of interest (worm region)
     
+    Parameters:
+    -----------
+    impixels : numpy array
+        Image as numpy array
+    ysize : int
+        Height of image
+    popt : array
+        Gaussian fit parameters
     
-    ##cropping lines to those that contain worm: [x0-3sigma, x0+3sigma]
+    Returns:
+    --------
+    lines : numpy array
+        Cropped lines in ROI
+    amount_lines : int
+        Number of lines
+    length_lines : int
+        Length of each line
+    """
+    lines = []
+    for i in range(0, ysize):
+        lines.append(impixels[i,:])
+    
+    lines = np.array(lines)
+    
+    print("amount of lines", int(lines.shape[0]))
+    print("length of lines", int(lines.shape[1]))
+    
+    # Crop to worm region [x0-3σ, x0+3σ]
     lines = lines[int(popt[1]-3*popt[2]):int(popt[1]+popt[2])]
     amount_lines = int(lines.shape[0])
     length_lines = int(lines.shape[1])
-
-    ##Average over all lines
     
-    #summing pixels of every line
-    sum = [] # gives single line with sum of all lines
-    for j in range(0,length_lines):
+    return lines, amount_lines, length_lines
+
+
+def average_lines(lines, amount_lines, length_lines):
+    """
+    Average all lines to get mean intensity profile along x-axis
+    
+    Parameters:
+    -----------
+    lines : numpy array
+        Array of lines
+    amount_lines : int
+        Number of lines
+    length_lines : int
+        Length of each line
+    
+    Returns:
+    --------
+    averline : numpy array
+        Averaged line profile
+    """
+    sum_array = []
+    for j in range(0, length_lines):
         x = lines[0,j]
-        for i in range(1,amount_lines-1):
+        for i in range(1, amount_lines-1):
             x = x + lines[i,j]
-        sum.append(x)
-
-    sum = np.array(sum)
-
-    #dividing by amount of lines
-    averline = sum/amount_lines
-    #print("average line", averline)
-
-    ##background subtraction
-    averline = (averline - bg)/bg
-
-    #set negative pixels to zero
-    for i in range(0,length_lines):
-        if averline[i]<0:
-            averline[i]=0
-
-    ##Illustration of spatial intensity distribution in x"""
-    if plot_x_inten==True:
+        sum_array.append(x)
     
+    sum_array = np.array(sum_array)
+    averline = sum_array / amount_lines
+    
+    return averline
+
+
+def plot_x_intensity_distribution(averline, length_lines, imname, index_acquisitionset, bg):
+    """
+    Plot spatial intensity distribution along x-axis
+    
+    Parameters:
+    -----------
+    averline : numpy array
+        Averaged line profile
+    length_lines : int
+        Length of line
+    imname : str
+        Image name
+    index_acquisitionset : int
+        Index of acquisition set
+    bg : float
+        Background value
+    """
+    if plot_x_inten == True:
         if same_graph_x == True:
             plt.figure(fig_x_inten_distr)
-            x = np.arange(0,length_lines)
+            x = np.arange(0, length_lines)
             y = averline
-            plt.plot(x,y,label=imname[6:9]+" bg= "+str(int(bg)))
+            plt.plot(x, y, label=imname[6:9]+" bg= "+str(int(bg)))
             plt.xlabel("xpixel from left to right")
             plt.ylabel("average intensity")
             plt.title("average intensity over x-axis for "+imname[0:5]+imname[9:22])
@@ -319,131 +466,69 @@ def process(imname,index_acquisitionset):
             plt.savefig("x_intensity_distribution"+imname[0:4]+imname[9:22])
             if imname == name_sets[index_acquisitionset][-1]:
                 plt.close(fig_x_inten_distr)
-            else:
-                pass
-            
         else:
             fig = plt.figure()
             x = np.arange(length_lines)
             y = averline
-            plt.plot(x,y,label=imname[6:8])
+            plt.plot(x, y, label=imname[6:8])
             plt.xlabel("xpixel from left to right")
             plt.ylabel("average intensity")
             plt.title("average intensity over x-axis of "+imname)
             plt.figtext(.7, .8, "bg= "+str(int(bg)))
             plt.savefig(str(imname)+"_x_intensity_distribution")
-            plt.close (fig)
-            
-    else:
-        pass            
-            
+            plt.close(fig)
 
-    """Averaging total intensity of picture"""
-    #cropping averaged column to y-pixels that contain worm: [x0-3sigma, x0+3sigma]
+
+def calculate_total_intensity(avercolumn, popt):
+    """
+    Calculate total intensity in worm region
+    
+    Parameters:
+    -----------
+    avercolumn : numpy array
+        Background-subtracted averaged column
+    popt : array
+        Gaussian fit parameters
+    
+    Returns:
+    --------
+    tot_inten_value : float
+        Mean intensity per pixel in worm region
+    """
+    # Crop to worm region [x0-3σ, x0+3σ]
     x = avercolumn[int(popt[1]-3*popt[2]):int(popt[1]+popt[2])]
-    #calculating total intensity value per area: Sum of all intensity values divided width of the worm
-    tot_inten_value = np.sum(x)/(float(len(x)))
-    #appending to list for later processing
-    totintensity.append(tot_inten_value)
-    calc_stats.append(tot_inten_value)
-        
-
-"""statistics on each acquisition set"""
-name_sets=np.array(name_sets,dtype=object)
-
-totintensity = [] #list of total intensity values for each image
-stats_acquisitions = [] #list of statistical values for each acuisition set
-calc_stats = [] #list for calculating statistical values of each acquisition set
-
-for index_acquisitionset in range(0,len(name_sets)): #loop through aquisition sets
-    print("Set of " + str(name_sets[index_acquisitionset][1][0:6])+str(name_sets[index_acquisitionset][1][10:22]))
-    for j in range(0,len(name_sets[index_acquisitionset])): #loop through images of one set
-        imname= name_sets[index_acquisitionset][j]
-        print("image", imname)
-
-        process(imname,index_acquisitionset) #add tot_inten_value to totintensity-list for chosen image
-        
-        ##if last image of set reached, determine statistics: stats_acquisitions=[median_set1,median_dev_set1, med_set2,med_dev_set2,...]
-        if imname == name_sets[index_acquisitionset][-1]:
-            median = np.median(calc_stats_sn)
-            print("Median=",median)
-            stats_acquisitions_sn.append(median)
-            mean = np.mean(calc_stats_sn) 
-            print("Mean=",mean)
-            std = np.std(calc_stats_sn)
-            print("std=",std)
-            meddev = robust.mad(calc_stats_sn)
-            stats_acquisitions_sn.append(meddev)
-            
-            calc_stats = [] #after acquisition set fully processed, clear data
-        else:
-            pass
-
-"""plotting statistics"""
-if plot_stats== True:
-    #median values
-    means=np.array(stats_acquisitions[0:len(stats_acquisitions):2])
-    #median deviations as errors
-    std=np.array(stats_acquisitions[1:len(stats_acquisitions):2])
-    #time points
-    t = []
-    for i in range(0,len(time_sets)):
-        t.append(float(time_sets[i][0])) #append first time point for each acquisition set
-    t=np.array(t)
-
-    ##plot figure
-    plt.figure(fig_tot_inten_stats)
-    plt.errorbar(t, means, std, linestyle='None', marker='x')
-    plt.xlabel("time[hrs]")
-    plt.ylabel("total intensity")
-    plt.title("total intensity of over time")
-    plt.savefig("total_intensity_over_time_stats_"+imname[0:6]+imname[10:22]) 
-    plt.close(fig_tot_inten_stats)
-else:
-    pass
-
-"""Plotting total intensity over time"""
-if plot_points==True:
-    plt.figure(fig_tot_inten_points)
-    totintensity = np.array(totintensity)
-    plt.errorbar(time,totintensity,linestyle='None', marker='x')
-
-    plt.xlabel("time[hrs]")
-    plt.ylabel("total intensity")
-    plt.title("total intensity of over time")
-    plt.savefig("total_intensity_over_time_points_"+imname[0:6]+imname[10:22])
-    plt.close(fig_tot_inten_points)
-else:
-    pass
     
-if plot_both == True:
+    # Calculate mean intensity per pixel
+    tot_inten_value = np.sum(x) / float(len(x))
+    
+    return tot_inten_value
 
-    plt.figure(fig_tot_inten)
-    
-    ##prepare data
-    #median values
-    means=np.array(stats_acquisitions[0:len(stats_acquisitions):2])
-    #median deviations as errors
-    std=np.array(stats_acquisitions[1:len(stats_acquisitions):2])
-    #time points
-    t = []
-    for i in range(0,len(time_sets)):
-        t.append(time_sets[i][0]) #append first time point for each acquisition set
-    t=np.array(t)
-    
-    totintensity = np.array(totintensity)
-    
-    ##plot both graphs
-    plt.subplot(2,1,1)
-    plt.errorbar(time,totintensity,linestyle='None', marker='x')
-    plt.ylabel("total intensity")
-    plt.title("total intensity of over time")
-    
-    plt.subplot(2, 1, 2)
-    plt.errorbar(t, means, std, linestyle='None', marker='x')
-    plt.xlabel("time[hrs]")
-    plt.ylabel("total intensity")
 
-    plt.savefig("total_intensity_over_time_"+imname[0:6]+imname[10:22]) 
-    plt.close(fig_tot_inten)
+def process(imname, index_acquisitionset):
+    """
+    Main processing function that orchestrates all analysis steps
+    
+    Parameters:
+    -----------
+    imname : str
+        Image filename without extension
+    index_acquisitionset : int
+        Index of acquisition set
+    
+    Returns:
+    --------
+    tot_inten_value : float
+        Total intensity value for this image
+    """
+    # Step 1: Load image
+    impixels, xsize, ysize = load_image(imname)
+    
+    # Step 2: Extract columns for y-axis analysis
+    columns, amount_columns, length_columns = extract_columns(impixels, xsize)
+    
+    # Step 3: Remove columns with zeros for background calculation
+    cropped_columns, cropped_amount_columns = remove_zero_columns(columns, amount_columns, length_columns)
+    
+    # Step 4: Average cropped columns
+    cropped_avercolumn = average_columns(cropped_columns, cropped_amou
 
