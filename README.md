@@ -44,6 +44,8 @@ This research project investigates the disturbing effect of autofluorescence (na
   <em>Figure 4: Bioluminescence images of mNeonGreen-labelled neurons for samples of different ages. The maturity is given in hours and the respective stages L1, L2, young adult and adult. Bioluminescence microscopy techniques are more subtle, but do not face the problem of autofluorescence. </em>
 </p>
 
+---
+
 ## Analysis Pipeline
 
 The analysis pipeline (`main.py`) uses modular functions to process fluorescence microscopy images and quantify autofluorescence development over time.
@@ -117,6 +119,8 @@ The analysis pipeline (`main.py`) uses modular functions to process fluorescence
 **Main Orchestration:**
 - `process()` - Executes complete analysis pipeline for one image
 
+---
+
 ## Code Structure and Configuration
 
 The refactored script uses boolean flags for flexible control:
@@ -130,6 +134,7 @@ The refactored script uses boolean flags for flexible control:
 - `plot_stats`: Show statistical summary with error bars
 - `plot_both`: Show combined view of points and statistics
 
+---
 
 ### Analysis Details
 
@@ -141,7 +146,9 @@ The refactored script uses boolean flags for flexible control:
 
 **Robust Statistics**: Median Absolute Deviation (MAD) provides outlier-resistant variability measures, important given biological variation between individual worms.
 
-### Evaluation
+---
+
+## Evaluation
 
 The analysis pipeline consistently reveals several key patterns across experimental conditions:
 
@@ -196,18 +203,6 @@ This ratio directly measures signal visibility: a high ratio means the neuronal 
 
 The results show a steady decrease in signal-to-autofluorescence ratio over time. This demonstrates that autofluorescence accumulates more rapidly than any changes in neuronal signal intensity, progressively masking the labeled neurons. This progressive signal loss is the core problem that motivates the search for alternative imaging approaches like bioluminescence microscopy.
 
----
-
-### Results Interpretation
-
-The analysis reveals:
-- **Progressive accumulation**: Total intensities increase systematically with age
-- **Wavelength effects**: GFP and mCherry filters show different autofluorescence characteristics
-- **Ratio decline**: Neuronal signal becomes progressively masked by autofluorescence
-
-![Total intensities](images/total_intensity_comparison.png)
-
-*Figure: Total intensities increase with age across all conditions, with strain-specific variability patterns.*
 
 ---
 
