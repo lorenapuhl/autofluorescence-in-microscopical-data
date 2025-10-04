@@ -71,6 +71,14 @@ The analysis pipeline (`14_FINAL_x_y_time.py`) uses modular functions to process
 - `replace_zeros_with_background()` - Fill artifacts with background value
 - `background_subtraction()` - Normalize intensities: (intensity - background) / background
 
+  <p align="center">
+
+  <img src="https://github.com/user-attachments/assets/60245e4c-61e0-485c-879d-fa47b548d3bf" alt="Image 4" width="700"/>
+  <br>
+  <em>Figure 4: Averaged spatial intensity over the y-axis. A Gaussian is tted to the data. Its baseline represents the computed background value. The worms y-coordinates are determined by the range $[x_0 - 3/sigma; x_0 + 3\sigma]$, where $x_0$ designates the Gaussian's median and $\sigma$ the standard deviation.</em>
+</p>
+
+
 **Quantification:**
 - `calculate_total_intensity()` - Compute mean intensity in worm region (x0 ± 3σ)
 - `calculate_statistics()` - Compute median, mean, std, and MAD for age groups
@@ -85,7 +93,7 @@ The analysis pipeline (`14_FINAL_x_y_time.py`) uses modular functions to process
 
   <img src="https://github.com/user-attachments/assets/d503b15b-d35a-48bf-bbe3-7be7d7d709cb" alt="Image 4" width="700"/>
   <br>
-  <em>Figure 4: (left) Fluorescence image of a worm's body-area near its gonad with a discernible neuron. The y-axis is illustrated using a blue arrow. (right) Spatial distribution of the mean intensity along the y-axis. A peak species the neuron's position, marked by a red arrow..</em>
+  <em>Figure 5: (left) Fluorescence image of a worm's body-area near its gonad with a discernible neuron. The y-axis is illustrated using a blue arrow. (right) Spatial distribution of the mean intensity along the y-axis. A peak species the neuron's position, marked by a red arrow..</em>
 </p>
 
 
