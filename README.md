@@ -157,12 +157,21 @@ The analysis pipeline consistently reveals several key patterns across experimen
 </p>
 
 
+  <p align="center">
+
+  <img src="https://github.com/user-attachments/assets/af611764-7947-4aba-b340-4e7352c776b2" alt="Image 4" width="700"/>
+  <br>
+  <em> Figure 9: Total intensities at different ages, using the GFP filtercube. Individual data-points, as well as medians and median standard deviations are depicted. (right) Intensities in the tails. (left) Intensities in the bodies.
+Figure </em>
+</p>
+
+
 
   <p align="center">
 
   <img src= "https://github.com/user-attachments/assets/85dae11f-46e1-498b-867e-7ee86b421205" alt="Image 4" width="700"/>
   <br>
-  <em> Figure 9: Spatial intensity distributions over the y-axis for worms of increasing ages using bioluminescence microsocopy. While fluorescence microscopy features increasing autofluorescence, intensity distributions using bioluminescence microscopy stay concentrated around the labelled neuron. </em>
+  <em> Figure 10: Spatial intensity distributions over the y-axis for worms of increasing ages using bioluminescence microsocopy. While fluorescence microscopy features increasing autofluorescence, intensity distributions using bioluminescence microscopy stay concentrated around the labelled neuron. </em>
 </p>
 
 
@@ -182,7 +191,7 @@ This ratio directly measures signal visibility: a high ratio means the neuronal 
 
   <img src= "https://github.com/user-attachments/assets/96ae548f-df51-4639-ad8a-7d159dd44d93" alt="Image 4" width="700"/>
   <br>
-  <em> Figure 10: Autofluorescence-to-noise ratios for the extrachromosomal strain MSB557 at different ages. Individual data-points, as well as medians and median standard deviations are depicted. (right) Autofluorescence-to-noise ratios in tails. (left) Autofluorescence-to-noise ratios in bodies.</em>
+  <em> Figure 11: Autofluorescence-to-noise ratios for the extrachromosomal strain MSB557 at different ages. Individual data-points, as well as medians and median standard deviations are depicted. (right) Autofluorescence-to-noise ratios in tails. (left) Autofluorescence-to-noise ratios in bodies.</em>
 </p>
 
 The results show a steady decrease in signal-to-autofluorescence ratio over time. This demonstrates that autofluorescence accumulates more rapidly than any changes in neuronal signal intensity, progressively masking the labeled neurons. This progressive signal loss is the core problem that motivates the search for alternative imaging approaches like bioluminescence microscopy.
