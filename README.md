@@ -10,7 +10,7 @@ What is science? It is the art of shedding light on the principles of nature. Ob
 
   <img src="https://github.com/user-attachments/assets/be83bb09-d97f-407b-b499-0612c785ff0b" alt="Image 1" width="700"/>
   <br>
-  <em>Figure 1: Anatomy of *Caenorhabditis elegans*</em>
+  <em>Figure 1: Anatomy of **Caenorhabditis elegans**</em>
 </p>
 
 <p align="center">
