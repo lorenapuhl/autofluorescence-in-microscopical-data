@@ -29,17 +29,19 @@ This research project investigates the disturbing effect of autofluorescence (na
 - **Age progression**: Samples imaged at different developmental stages to assess autofluorescence accumulation
 - **Analysis**: Spatial intensity distributions and signal quantification across body parts (extrachromosomal and integrated strains, tails, bodies, mNeonGreen-spectra, and mCherry-spectra)
 
+
+
 - <p align="center">
 
-  <img src="https://github.com/user-attachments/assets/e38ba36e-8449-4ba5-843d-ea3198b24855" alt="Image 1" width="700"/>
+  <img src="https://github.com/user-attachments/assets/1d87646f-eb5d-4ad8-a851-a4bcb8f8afaf" alt="Image 1" width="700"/>
   <br>
-  <em>Figure 3: Fluorescence images of mNeonGreen-labelled neurons for ageing C. elegans samples.</em>
+  <em>Figure 3: Fluorescence microscopy images of mNeonGreen-labelled C. elegans samples at different ages. The maturity levels are denoted in hours, and using the respective stage's names L2, young adult (yound ad) and adult (ad). The left pictures show the anterior neurons in the worms' bodies, whereas the right images depict the posterior neurons in the worms' tails.</em>
 </p>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/bdf4aa18-1075-4c71-8560-9544e1812f99" alt="Image 2" width="700"/>
   <br>
-  <em>Figure 4: Bioluminescence images of mNeonGreen-labelled neurons for ageing C. elegans samples </em>
+  <em>Figure 4: Bioluminescence images of mNeonGreen-labelled neurons for samples of different ages. The maturity is given in hours and the respective stages L1, L2, young adult and adult. (1 inch = 2.54 cm) </em>
 </p>
 
 ## Analysis Pipeline
@@ -78,6 +80,14 @@ The analysis pipeline (`14_FINAL_x_y_time.py`) uses modular functions to process
   <em> Figure 4: Averaged spatial intensity over the y-axis. A Gaussian is fitted to the data. Its baseline represents the computed background value. The worm's y-coordinates are determined by the range [x₀ - 3σ, x₀ + 3σ], where x₀ designates the Gaussian's median and σ the standard deviation. </em>
 </p>
 
+  <p align="center">
+
+  <img src="https://github.com/user-attachments/assets/f12aa9d3-9fff-4a27-81ba-7134f1f0f86c" alt="Image 4" width="500"/>
+  <br>
+  <em> Figure 5: Not every column is utilised to determine the average spatial intensity, used for the Gaussian t. The red arrows indicate those, which contain zero-value pixels. These are provisionally excluded from the calculations.</em>
+</p>
+
+
 
 **Quantification:**
 - `calculate_total_intensity()` - Compute mean intensity in worm region (x0 ± 3σ)
@@ -93,8 +103,16 @@ The analysis pipeline (`14_FINAL_x_y_time.py`) uses modular functions to process
 
   <img src="https://github.com/user-attachments/assets/d503b15b-d35a-48bf-bbe3-7be7d7d709cb" alt="Image 4" width="700"/>
   <br>
-  <em>Figure 5: (left) Fluorescence image of a worm's body-area near its gonad with a discernible neuron. The y-axis is illustrated using a blue arrow. (right) Spatial distribution of the mean intensity along the y-axis. A peak species the neuron's position, marked by a red arrow..</em>
+  <em>Figure 6: (left) Fluorescence image of a worm's body-area near its gonad with a discernible neuron. The y-axis is illustrated using a blue arrow. (right) Spatial distribution of the mean intensity along the y-axis. A peak species the neuron's position, marked by a red arrow..</em>
 </p>
+
+  <p align="center">
+
+  <img src="https://github.com/user-attachments/assets/46a7045e-67bf-47ee-8b8a-061737263188" alt="Image 4" width="700"/>
+  <br>
+  <em> Figure 7: (left) Fluorescence microscopy image of a worm's mid-body area. Using a blue arrow, the image's x-axis is denoted, while a red arrows marks the touch-receptor neuron. (right) Respective spatial intensity distribution over the x-axis. The x-axis is denoted using a blue. A signicant peak, at the the neuron's x-coordinate is marked by a red arrow.</em>
+</p>
+
 
 
 
