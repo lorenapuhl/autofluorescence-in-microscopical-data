@@ -81,6 +81,15 @@ The analysis pipeline (`14_FINAL_x_y_time.py`) uses modular functions to process
 - `plot_statistics()` - Statistical summary with error bars
 - `plot_combined()` - Two-panel view combining both
 
+  <p align="center">
+
+  <img src="https://github.com/user-attachments/assets/d503b15b-d35a-48bf-bbe3-7be7d7d709cb" alt="Image 4" width="700"/>
+  <br>
+  <em>Figure 4: (left) Fluorescence image of a worm's body-area near its gonad with a discernible neuron. The y-axis is illustrated using a blue arrow. (right) Spatial distribution of the mean intensity along the y-axis. A peak species the neuron's position, marked by a red arrow..</em>
+</p>
+
+
+
 **Main Orchestration:**
 - `process()` - Executes complete analysis pipeline for one image
 
