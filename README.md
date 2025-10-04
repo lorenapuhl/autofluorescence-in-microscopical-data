@@ -4,7 +4,7 @@ Bachelor's Thesis conducted at ICFO (Institute of Photonic Sciences), Barcelona.
 ## Motivation
 
 What is science? It is the art of shedding light on the principles of nature, and understanding our surroundings and the world we live in. Observation was the first step towards science, followed by the attempt to explain and understand what had been witnessed. This idea lead to the development of microscopes. Techniques rapidly improved, until In the 20th century 
-**Fluorescence microscopy** became a new powerful tool for studying biological matter. Later, in 2010, the use of **bioluminescence** for depicting features hidden to the bare eyes emerged. It is a fairly new idea, that might in future replace the current standard, i.e. **Fluorescence microscopy**, since the latter technique features several drawbacks, such as so-called **autofluorescence**. This research project aims at shedding light onto the contrasting features of both imaging methods, by giving special attention to **autofluorescence**. For this purpose, **C. elegans** is used as an experimental model. 
+**Fluorescence microscopy** became a new powerful tool for studying biological matter. Later, in 2010, the use of **bioluminescence** for depicting features hidden to the bare eyes emerged. It is a fairly new idea, that might in future replace the current standard, i.e. **Fluorescence microscopy**, since the latter technique features several drawbacks. One of the disadvantages is so-called **autofluorescence**, which is examined in this research project. It aims at shedding light onto the contrasting features fluorescence and bioluminescence microscopy, by using **C. elegans** as an experimental model. 
 
 <p align="center">
 
