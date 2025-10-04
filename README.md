@@ -205,9 +205,27 @@ This ratio directly measures signal visibility: a high ratio means the neuronal 
 
   <img src= "https://github.com/user-attachments/assets/96ae548f-df51-4639-ad8a-7d159dd44d93" alt="Image 4" width="700"/>
   <br>
-  <em> Figure 11: Autofluorescence-to-noise ratios for the extrachromosomal strain MSB557 at different ages. Individual data-points, as well as medians and median standard deviations are depicted. (right) Autofluorescence-to-noise ratios in tails. (left) Autofluorescence-to-noise ratios in bodies. The results show a steady decrease in signal-to-autofluorescence ratio over time. This demonstrates that autofluorescence accumulates, progressively masking the labeled neurons. </em>
+  <em> Figure 11: Autofluorescence-to-noise ratios at different ages. Individual data-points, as well as medians and median standard deviations are depicted. (right) Autofluorescence-to-noise ratios in tails. (left) Autofluorescence-to-noise ratios in bodies. The results show a steady decrease in signal-to-autofluorescence ratio over time. This demonstrates that autofluorescence accumulates, progressively masking the labeled neurons. </em>
 </p>
 
 ---
+
+## Usage
+
+- **Prepare data:**  Place TIFF images in data directory (naming: `[date]_[worm]_[region]_[filter].tif`)
+- **Configure script:** Edit image name lists and acquisition times (hours post-hatching)
+- **Set flags:** Enable/disable visualizations (`plot_y_inten, plot_x_inten, plot_points, plot_stats, plot_both`)
+- **Run:** `python main.py`
+- **Review outputs:** Check spatial profiles, Gaussian fits, and temporal plots
+
+---
+
+## Concact
+
+Author: Lorena Puhl
+Email: lorena.puhl@protonmail.com
+Institution: ICFO (Institute of Fotonic Sciences), Barcelona and the University of Heidelberg
+
+For further details, please refer to my [`thesis`](https://github.com/lorenapuhl/autofluorescence-in-microscopical-data/blob/main/thesis.pdf)
 
 
