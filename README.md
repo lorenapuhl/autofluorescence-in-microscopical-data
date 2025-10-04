@@ -8,13 +8,13 @@ What is science? It is the art of shedding light on the principles of nature, an
 
 <p align="center">
 
-  <img src="https://github.com/user-attachments/assets/be83bb09-d97f-407b-b499-0612c785ff0b" alt="Image 1" width="600"/>
+  <img src="https://github.com/user-attachments/assets/be83bb09-d97f-407b-b499-0612c785ff0b" alt="Image 1" width="700"/>
   <br>
   <em>Figure 1: Anatomy of *Caenorhabditis elegans*</em>
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/123f4c50-382e-407d-8b3b-ebe24f8aa053" alt="Image 2" width="600"/>
+  <img src="https://github.com/user-attachments/assets/123f4c50-382e-407d-8b3b-ebe24f8aa053" alt="Image 2" width="700"/>
   <br>
   <em>Figure 2: Fluorescence microscopy performed on C. elegans</em>
 </p>
@@ -22,7 +22,7 @@ What is science? It is the art of shedding light on the principles of nature, an
 
 ## Project Overview
 
-This research project investigates the disturbing effect of autofluorescence over time in microscopy imaging of *Caenorhabditis elegans*. As organisms age, autofluorescence increases and can interfere with the visualization of fluorescent signals, making it challenging to study labeled neurons in aging animals.
+This research project investigates the disturbing effect of autofluorescence (natural emission of light by biological structures other than the labeled feature) over time in microscopy imaging of *Caenorhabditis elegans*. As organisms age, autofluorescence increases and can interfere with the visualization of fluorescent signals, making it challenging to study labeled neurons in aging animals.
 
 
 ### Research Focus
@@ -31,6 +31,24 @@ This research project investigates the disturbing effect of autofluorescence ove
 - **Imaging techniques**: Fluorescence microscopy vs. bioluminescence microscopy
 - **Age progression**: Samples imaged at different developmental stages to assess autofluorescence accumulation
 - **Analysis**: Spatial intensity distributions and signal quantification across body parts (extrachromosomal and integrated strains, tails, bodies, mNeonGreen-spectra, and mCherry-spectra)
+
+- <p align="center">
+
+  <img src="https://github.com/user-attachments/assets/e38ba36e-8449-4ba5-843d-ea3198b24855" alt="Image 1" width="700"/>
+  <br>
+  <em>Figure 3: Fluorescence images of mNeonGreen-labelled neurons for ageing C. elegans samples.</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/bdf4aa18-1075-4c71-8560-9544e1812f99" alt="Image 2" width="700"/>
+  <br>
+  <em>Figure 4: Bioluminescence images of mNeonGreen-labelled neurons for ageing C. elegans samples </em>
+</p>
+
+![progession]()
+
+![bioluminescence]()
+
 
 ### Key Findings
 
