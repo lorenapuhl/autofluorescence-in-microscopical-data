@@ -24,9 +24,6 @@ What is science? It is the art of shedding light on the principles of nature, an
 
 This research project investigates the disturbing effect of autofluorescence (natural emission of light by biological structures other than the labeled feature) over time in microscopy imaging of *Caenorhabditis elegans*. As organisms age, autofluorescence increases and can interfere with the visualization of fluorescent signals, making it challenging to study labeled neurons in aging animals.
 
-
-### Research Focus
-
 - **Model organism**: Two transgenic strains of *C. elegans* with mNeonGreen-labeled touch receptor neurons
 - **Imaging techniques**: Fluorescence microscopy vs. bioluminescence microscopy
 - **Age progression**: Samples imaged at different developmental stages to assess autofluorescence accumulation
@@ -45,20 +42,16 @@ This research project investigates the disturbing effect of autofluorescence (na
   <em>Figure 4: Bioluminescence images of mNeonGreen-labelled neurons for ageing C. elegans samples </em>
 </p>
 
-![progession]()
-
-![bioluminescence]()
+## Analysis
 
 
-### Key Findings
+## Conclusion
 
 - **Autofluorescence behavior**: Autofluorescence increases with age in fluorescence microscopy, creating a "veil" that obscures neuronal signals
 - **Bioluminescence advantage**: Bioluminescence methods maintain consistently visible neuronal signals regardless of sample age
 - **Signal-to-autofluorescence ratio**: Decreases over time in fluorescence imaging, demonstrating the progressive interference
 - **Strain differences**: Extrachromosomal strains show higher data variability compared to integrated strains
 - **Optimal conditions**: mCherry wavelength range and tail tissue analysis provide better fluorescence imaging results
-
-### Main Conclusion
 
 **Bioluminescence microscopy demonstrates superior suitability for imaging aging *C. elegans* samples**, as it avoids the autofluorescence interference that progressively degrades fluorescence imaging quality over time.
 
