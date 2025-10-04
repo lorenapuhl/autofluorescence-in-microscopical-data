@@ -46,6 +46,10 @@ This research project investigates the disturbing effect of autofluorescence (na
 
 ---
 
+## Repository Structure
+
+---
+
 ## Analysis Pipeline
 
 The analysis pipeline (`main.py`) uses modular functions to process fluorescence microscopy images and quantify autofluorescence development over time.
@@ -119,9 +123,10 @@ The analysis pipeline (`main.py`) uses modular functions to process fluorescence
 **Main Orchestration:**
 - `process()` - Executes complete analysis pipeline for one image
 
+
 ---
 
-## Code Structure and Configuration
+### Code Structure and Configuration
 
 The refactored script uses boolean flags for flexible control:
 
@@ -152,7 +157,9 @@ The refactored script uses boolean flags for flexible control:
 
 The analysis pipeline consistently reveals several key patterns across experimental conditions:
 
-**Progressive Autofluorescence Accumulation**: Total intensities increase systematically with age across all samples. This demonstrates that autofluorescent compounds accumulate in aging worms, progressively increasing the background fluorescence signal. The rate of increase varies between conditions but the trend is universal.
+### Progressive Autofluorescence Accumulation
+
+Total intensities increase systematically with age across all samples. This demonstrates that autofluorescent compounds accumulate in aging worms, progressively increasing the background fluorescence signal. The rate of increase varies between conditions but the trend is universal.
 
 
 
@@ -183,7 +190,7 @@ Figure </em>
 
 
 
-### 11. Neuron-to-Autofluorescence Ratio
+### Neuron-to-Autofluorescence Ratio
 
 We further examine how autofluorescence affects the visibility of intentionally labeled neuronal signals. The neuron-to-autofluorescence ratio analysis involves:
 
@@ -198,12 +205,9 @@ This ratio directly measures signal visibility: a high ratio means the neuronal 
 
   <img src= "https://github.com/user-attachments/assets/96ae548f-df51-4639-ad8a-7d159dd44d93" alt="Image 4" width="700"/>
   <br>
-  <em> Figure 11: Autofluorescence-to-noise ratios for the extrachromosomal strain MSB557 at different ages. Individual data-points, as well as medians and median standard deviations are depicted. (right) Autofluorescence-to-noise ratios in tails. (left) Autofluorescence-to-noise ratios in bodies.</em>
+  <em> Figure 11: Autofluorescence-to-noise ratios for the extrachromosomal strain MSB557 at different ages. Individual data-points, as well as medians and median standard deviations are depicted. (right) Autofluorescence-to-noise ratios in tails. (left) Autofluorescence-to-noise ratios in bodies. The results show a steady decrease in signal-to-autofluorescence ratio over time. This demonstrates that autofluorescence accumulates, progressively masking the labeled neurons. </em>
 </p>
-
-The results show a steady decrease in signal-to-autofluorescence ratio over time. This demonstrates that autofluorescence accumulates more rapidly than any changes in neuronal signal intensity, progressively masking the labeled neurons. This progressive signal loss is the core problem that motivates the search for alternative imaging approaches like bioluminescence microscopy.
-
 
 ---
 
-## Repository Structure
+
