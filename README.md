@@ -10,8 +10,10 @@ What is science? It is the art of shedding light on the principles of nature. Ob
 
   <img src="https://github.com/user-attachments/assets/be83bb09-d97f-407b-b499-0612c785ff0b" alt="Image 1" width="700"/>
   <br>
-  <em>Figure 1: Anatomy of Caenorhabditis elegans</em>
+  <em>Figure 1: Anatomy of Caenorhabditis elegans. </em>
 </p>
+
+<br>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/123f4c50-382e-407d-8b3b-ebe24f8aa053" alt="Image 2" width="700"/>
@@ -22,9 +24,9 @@ What is science? It is the art of shedding light on the principles of nature. Ob
 
 ## Project Overview
 
-This research project investigates the disturbing effect of *autofluorescence* in fluorescence microscopy. It refers to the natural emission of light by biological structures, blurring the signal obtained by the labelled feature of interest. other than the labeled feature over time in microscopy imaging of *Caenorhabditis elegans*. As organisms age, autofluorescence increases and progressively obstructs the use fluoerescence microscopy.
+This research project investigates the disturbing effect of *autofluorescence* in fluorescence microscopy. It refers to the natural emission of light by biological structures, blurring the signal obtained by the labelled feature of interest. As organisms age, autofluorescence increases and progressively obstructs the use fluoerescence microscopy. Results are compared with data obtained using bioluminescence microscopy, which is not subject to autofluorescence.
 
-- **Model organism**: Transgenic strains of *C. elegans* with mNeonGreen-labelled touch receptor neurons. Ideally, fluorescence microsocopy should only reveal labelled features, i.e. in this case, the denoted neurons
+- **Model organism**: Transgenic strains of *Caenorhabditis elegans* with mNeonGreen-labelled touch-receptor neurons. Ideally, fluorescence microsocopy should only reveal labelled features, i.e. the denoted neurons.
 - **Imaging techniques**: Fluorescence microscopy vs. bioluminescence microscopy
 - **Age progression**: Samples imaged at different developmental stages to assess autofluorescence accumulation. Autofluorescence the emossion of light by biological structures other than the labelled feature. This blurs and covers the signals of interest (touch-receptor neurons in our case).
 - **Analysis**: Spatial intensity distributions and signal quantification across body parts.
@@ -38,6 +40,9 @@ This research project investigates the disturbing effect of *autofluorescence* i
   <em>Figure 3: Fluorescence microscopy images of mNeonGreen-labelled C. elegans samples at different ages. The maturity levels are denoted in hours, and using the respective stage's names L2, young adult (yound ad) and adult (ad). The left pictures show the anterior neurons in the worms' bodies, whereas the right images depict the posterior neurons in the worms' tails. While young worms clearly reveal the labelled neurons, older worms feature higher autofluorescence, which increasingly covers the neuron's signals.</em>
 </p>
 
+<br>
+<br>
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/bdf4aa18-1075-4c71-8560-9544e1812f99" alt="Image 2" width="700"/>
   <br>
@@ -48,11 +53,18 @@ This research project investigates the disturbing effect of *autofluorescence* i
 
 ## Repository Structure
 
+```
+├── main.py                        # Main analysis script (refactored with modular functions)
+├── README.md                      # Project documentation
+├── thesis.pdf                     # Bachelor's thesis document
+
+```
+
 ---
 
 ## Analysis Pipeline
 
-The analysis pipeline (`main.py`) uses modular functions to process fluorescence microscopy images and quantify autofluorescence development over time.
+The analysis pipeline ([`main.py`](https://github.com/lorenapuhl/autofluorescence-in-microscopical-data/blob/main/main.py)) uses modular functions to process fluorescence microscopy images and quantify autofluorescence development over time.
 
 ### Workflow Overview
 
@@ -112,6 +124,8 @@ The analysis pipeline (`main.py`) uses modular functions to process fluorescence
   <em>Figure 6: (left) Fluorescence image of a worm's body-area near its gonad with a discernible neuron. The y-axis is illustrated using a blue arrow. (right) Spatial distribution of the mean intensity along the y-axis. A peak species the neuron's position, marked by a red arrow..</em>
 </p>
 
+<br>
+
   <p align="center">
 
   <img src="https://github.com/user-attachments/assets/46a7045e-67bf-47ee-8b8a-061737263188" alt="Image 4" width="700"/>
@@ -141,25 +155,13 @@ The refactored script uses boolean flags for flexible control:
 
 ---
 
-### Analysis Details
-
-**Gaussian Fitting**: The script fits a bell curve to the y-axis intensity profile. The baseline parameter defines background autofluorescence; the center and width define the worm region (x0 ± 3σ covers ~99.7% of the worm).
-
-**Background Normalization**: Converting absolute intensities to `(intensity - background) / background` allows fair comparison between samples imaged under different conditions.
-
-**Region of Interest**: Cropping to x0 ± 3σ focuses analysis on the worm while excluding most background, improving signal-to-noise ratio.
-
-**Robust Statistics**: Median Absolute Deviation (MAD) provides outlier-resistant variability measures, important given biological variation between individual worms.
-
----
-
 ## Evaluation
 
 The analysis pipeline consistently reveals several key patterns across experimental conditions:
 
-### Progressive Autofluorescence Accumulation
+### 1. Progressive Autofluorescence Accumulation
 
-Total intensities increase systematically with age across all samples. This demonstrates that autofluorescent compounds accumulate in aging worms, progressively increasing the background fluorescence signal. The rate of increase varies between conditions but the trend is universal.
+Total intensities increase systematically with age across all samples. This demonstrates that autofluorescent compounds accumulate in ageing worms, progressively increasing the background fluorescence signal.
 
 
 
@@ -167,19 +169,19 @@ Total intensities increase systematically with age across all samples. This demo
 
   <img src="https://github.com/user-attachments/assets/0fb61e44-5ce1-482c-9d53-ea24f6e5791e" alt="Image 4" width="700"/>
   <br>
-  <em> Figure 8: Spatial intensity distributions over the y-axis for worms of increasing ages using fluorescence microscopy. One can qualitiatively infer, that while young worms mainly showcase high intensities in the neuron's region, older worms feature higher overall intensities (autofluorescence) </em>
+  <em> Figure 8: Spatial intensity distributions over the y-axis for worms of increasing ages using fluorescence microscopy. One can qualitiatively infer, that while young worms mainly showcase high intensities in the neuron's region, older worms feature higher overall intensities (autofluorescence). </em>
 </p>
 
-
+<br>
   <p align="center">
 
   <img src="https://github.com/user-attachments/assets/af611764-7947-4aba-b340-4e7352c776b2" alt="Image 4" width="700"/>
   <br>
-  <em> Figure 9: Total intensities at different ages, using the GFP filtercube. Individual data-points, as well as medians and median standard deviations are depicted. (right) Intensities in the tails. (left) Intensities in the bodies.
+  <em> Figure 9: Total intensities at different ages, using the GFP filtercube. Individual data-points, as well as medians and median standard deviations are depicted. (right) Intensities in the tails. (left) Intensities in the bodies.
 Figure </em>
 </p>
 
-
+<br>
 
   <p align="center">
 
@@ -190,9 +192,9 @@ Figure </em>
 
 
 
-### Neuron-to-Autofluorescence Ratio
+### 2. Neuron-to-Autofluorescence Ratio
 
-We further examine how autofluorescence affects the visibility of intentionally labeled neuronal signals. The neuron-to-autofluorescence ratio analysis involves:
+We further examine how autofluorescence affects the visibility of intentionally labelled neuronal signals. The neuron-to-autofluorescence ratio analysis involves:
 
 1. Separately quantifying the fluorescence intensity from labeled touch receptor neurons
 2. Calculating the ratio between neuronal signal and total autofluorescence
@@ -205,12 +207,12 @@ This ratio directly measures signal visibility: a high ratio means the neuronal 
 
   <img src= "https://github.com/user-attachments/assets/96ae548f-df51-4639-ad8a-7d159dd44d93" alt="Image 4" width="700"/>
   <br>
-  <em> Figure 11: Autofluorescence-to-noise ratios at different ages. Individual data-points, as well as medians and median standard deviations are depicted. (right) Autofluorescence-to-noise ratios in tails. (left) Autofluorescence-to-noise ratios in bodies. The results show a steady decrease in signal-to-autofluorescence ratio over time. This demonstrates that autofluorescence accumulates, progressively masking the labeled neurons. </em>
+  <em> Figure 11: Autofluorescence-to-noise ratios at different ages. Individual data-points, as well as medians and median standard deviations are depicted. (right) Autofluorescence-to-noise ratios in tails. (left) Autofluorescence-to-noise ratios in bodies. The results show a steady decrease in signal-to-autofluorescence ratio over time. This demonstrates that autofluorescence accumulates, progressively masking the labeled neurons. </em>
 </p>
 
 ---
 
-## Usage
+## Script Usage
 
 - **Prepare data:**  Place TIFF images in data directory (naming: `[date]_[worm]_[region]_[filter].tif`)
 - **Configure script:** Edit image name lists and acquisition times (hours post-hatching)
@@ -222,9 +224,9 @@ This ratio directly measures signal visibility: a high ratio means the neuronal 
 
 ## Concact
 
-Author: Lorena Puhl
-Email: lorena.puhl@protonmail.com
-Institution: ICFO (Institute of Fotonic Sciences), Barcelona and the University of Heidelberg
+- **Author:** Lorena Puhl
+- **Email:** lorena.puhl@protonmail.com
+- **Institution:** ICFO (Institute of Fotonic Sciences), Barcelona and the University of Heidelberg
 
 For further details, please refer to my [`thesis`](https://github.com/lorenapuhl/autofluorescence-in-microscopical-data/blob/main/thesis.pdf)
 
