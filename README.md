@@ -10,23 +10,23 @@ What is science? It is the art of shedding light on the principles of nature. Ob
 
   <img src="https://github.com/user-attachments/assets/be83bb09-d97f-407b-b499-0612c785ff0b" alt="Image 1" width="700"/>
   <br>
-  <em>Figure 1: Anatomy of **Caenorhabditis elegans**</em>
+  <em>Figure 1: Anatomy of Caenorhabditis elegans</em>
 </p>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/123f4c50-382e-407d-8b3b-ebe24f8aa053" alt="Image 2" width="700"/>
   <br>
-  <em>Figure 2: Fluorescence microscopy performed on C. elegans</em>
+  <em>Figure 2: Fluorescence microscopy performed on C. elegans. The feature of interest is tagged using a fluorescent protein. In an ideal world, only the tagged parts are visible under a fluorescence microsocope. </em>
 </p>
 
 
 ## Project Overview
 
-This research project investigates the disturbing effect of autofluorescence (natural emission of light by biological structures other than the labeled feature) over time in microscopy imaging of *Caenorhabditis elegans*. As organisms age, autofluorescence increases and can interfere with the visualization of fluorescent signals, making it challenging to study labeled neurons in aging animals.
+This research project investigates the disturbing effect of *autofluorescence* in fluorescence microscopy. It refers to the natural emission of light by biological structures, blurring the signal obtained by the labelled feature of interest. other than the labeled feature over time in microscopy imaging of *Caenorhabditis elegans*. As organisms age, autofluorescence increases and progressively obstructs the use fluoerescence microscopy.
 
-- **Model organism**: Transgenic strains of *C. elegans* with mNeonGreen-labelled touch receptor neurons. Ideally, fluorescence microsocopy should only reveal labelled features, i.e. in this case, touch-receptor neurons
+- **Model organism**: Transgenic strains of *C. elegans* with mNeonGreen-labelled touch receptor neurons. Ideally, fluorescence microsocopy should only reveal labelled features, i.e. in this case, the denoted neurons
 - **Imaging techniques**: Fluorescence microscopy vs. bioluminescence microscopy
-- **Age progression**: Samples imaged at different developmental stages to assess autofluorescence accumulation. Autofluorescence denotes the noise effect of other biological features emitting the same light wavelengths as the labelled neurons. Therefore, the neuron's signal is blurred and covered.
+- **Age progression**: Samples imaged at different developmental stages to assess autofluorescence accumulation. Autofluorescence the emossion of light by biological structures other than the labelled feature. This blurs and covers the signals of interest (touch-receptor neurons in our case).
 - **Analysis**: Spatial intensity distributions and signal quantification across body parts.
 
 
